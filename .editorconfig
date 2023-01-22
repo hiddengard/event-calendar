@@ -1,0 +1,25 @@
+# Editor configuration, see https://editorconfig.org
+root = true
+
+[*]
+charset = utf-8
+indent_style = space
+<<<<<<< Updated upstream
+indent_size = 2
+=======
+indent_size = 4
+>>>>>>> Stashed changes
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+<<<<<<< Updated upstream
+[*.js, jsx, ts, tsx, css, scss]
+=======
+[*.{js, jsx, ts, tsx, css, scss}]
+>>>>>>> Stashed changes
+quote_type = single
+
+[*.md]
+max_line_length = off
+trim_trailing_whitespace = false

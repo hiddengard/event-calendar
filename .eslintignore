@@ -1,0 +1,12 @@
+**/*.d.ts
+<<<<<<< Updated upstream
+test/**/*.ts*
+docker/*
+node_modules
+public
+.next
+=======
+node_modules
+public
+>>>>>>> Stashed changes
+/build
