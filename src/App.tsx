@@ -1,6 +1,6 @@
 import './App.css';
-import { Layout } from 'antd';
-import React, { FC, useEffect } from 'react';
+import { ConfigProvider, Layout, theme } from 'antd';
+import React, { FC, useEffect, useState } from 'react';
 
 import AppRouter from './components/AppRouter';
 import Navbar from './components/Navbar';
@@ -17,14 +17,27 @@ const App: FC = () => {
         }
     }, []);
 
+    const { defaultAlgorithm, darkAlgorithm } = theme;
+    const [isDarkMode, setIsDarkMode] = useState(true);
+
     return (
         <div className='App'>
-            <Layout>
-                <Navbar />
-                <Layout.Content>
-                    <AppRouter />
-                </Layout.Content>
-            </Layout>
+            <ConfigProvider
+                theme={{
+                    algorithm: isDarkMode ? darkAlgorithm : defaultAlgorithm,
+                    token: {
+                        colorBgBase: isDarkMode ? 'rgb(35 39 47)' : '#fff',
+                        colorPrimary: 'rgb(8 126 164)',
+                    },
+                }}
+            >
+                <Layout>
+                    <Navbar setIsDarkMode={setIsDarkMode} />
+                    <Layout.Content>
+                        <AppRouter />
+                    </Layout.Content>
+                </Layout>
+            </ConfigProvider>
         </div>
     );
 };

@@ -7,8 +7,8 @@ import { rules } from '../utils/rules';
 
 const LoginForm: FC = () => {
     const { error, isLoading } = useTypedSelector(state => state.auth);
-    const [username, setUsername] = useState('admin');
-    const [password, setPassword] = useState('123');
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
     const { login } = useActions();
 
     const submit = () => {
