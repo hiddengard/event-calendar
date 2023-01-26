@@ -1,4 +1,4 @@
-import { EventAction, EventState } from './types';
+import { EventAction, EventActionEnum, EventState } from './types';
 
 export const initialState: EventState = {
     guests: [],
@@ -7,6 +7,10 @@ export const initialState: EventState = {
 
 export default function EventReducer(state = initialState, action: EventAction): EventState {
     switch (action.type) {
+        case EventActionEnum.SET_EVENTS:
+            return { ...state, events: action.payload };
+        case EventActionEnum.SET_GUESTS:
+            return { ...state, guests: action.payload };
         default:
             return state;
     }

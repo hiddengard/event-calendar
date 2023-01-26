@@ -13,12 +13,12 @@ export enum EventActionEnum {
 
 export interface SetGuestsAction {
     type: EventActionEnum.SET_GUESTS;
-    guests: IUser[];
+    payload: IUser[];
 }
 
 export interface SetEventsAction {
     type: EventActionEnum.SET_EVENTS;
-    guests: IEvent[];
+    payload: IEvent[];
 }
 
 export type EventAction = SetGuestsAction | SetEventsAction;

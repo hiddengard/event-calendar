@@ -13,7 +13,7 @@
     "overrides": [],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
-        "ecmaVersion": "latest",
+        "ecmaVersion": 2022,
         "sourceType": "module",
         "project": "./tsconfig.json"
     },
@@ -45,6 +45,8 @@
         "no-duplicate-imports": "error",
         "@typescript-eslint/no-explicit-any": ["off"],
         "@typescript-eslint/no-non-null-assertion": "off",
+        "@typescript-eslint/promise-function-async": "off",
+        "@typescript-eslint/no-extraneous-class": "off",
         "no-unused-vars": "off",
         "@typescript-eslint/no-unused-vars": [
             "warn",

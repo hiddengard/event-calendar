@@ -3,4 +3,14 @@ export const rules = {
         required: true,
         message,
     }),
+    /* 
+            isDateAfter: (message: string) => () => ({
+                validator(_: any, value: Dayjs) {
+                    if (value.isSameOrAfter(dayjs())) {
+                        return Promise.resolve();
+                    }
+                    return Promise.reject(new Error(message));
+                },
+            }),
+                */
 };
